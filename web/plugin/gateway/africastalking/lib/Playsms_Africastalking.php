@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with playSMS. If not, see <http://www.gnu.org/licenses/>.
  */
-class Playsms_Africastalking extends AfricastalkingGateway {
+class Playsms_Africastalking extends AfricasTalkingGateway {
 
 	public function __construct($_apiKey = '', $_username = '', $baseUrl = '') {
 		if ($_apiKey = trim($_apiKey)) {

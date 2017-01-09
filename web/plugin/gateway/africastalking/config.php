@@ -1,7 +1,7 @@
 <?php
 defined('_SECURE_') or die('Forbidden');
 
-if (!class_exists('Africastalking')) {
+if (!class_exists('AfricasTalkingGateway')) {
 	include $core_config['apps_path']['plug'] . '/gateway/africastalking/lib/Africastalking.php';
 }
 
