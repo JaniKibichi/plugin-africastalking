@@ -1,0 +1,23 @@
+{{ DIALOG_DISPLAY }}
+<h2>{{ Manage africastalking }}</h2>
+<form action=index.php?app=main&inc=gateway_africastalking&op=manage_save method=post>
+{{ CSRF_FORM }}
+<table class=playsms-table>
+	<tbody>
+		<tr><td class=label-sizer>{{ Gateway name }}</td><td>africastalking</td></tr>
+		<tr><td>{{ Africastalking URL }}</td><td><input type=text maxlength=250 name=up_url value="{{ africastalking_param_url }}"> {{ HINT_JSON_FORMAT }}</td></tr>
+		<tr><td>{{ API key }}</td><td><input type=text maxlength=30 name=up_api_key value="{{ africastalking_param_api_key }}"></td></tr>
+		<tr><td>{{ API secret }}</td><td><input type=password maxlength=30 name=up_api_secret value=""> {{ HINT_FILL_SECRET }}</td></tr>
+		<tr><td>{{ Module sender ID }}</td><td><input type=text maxlength=16 name=up_module_sender value="{{ africastalking_param_module_sender }}"> {{ HINT_GLOBAL_SENDER }}</td></tr>
+		<tr><td>{{ Module timezone }}</td><td><input type=text size=5 maxlength=5 name=up_global_timezone value="{{ africastalking_param_datetime_timezone }}"> {{ HINT_TIMEZONE }}</td></tr>
+	</tbody>
+</table>
+<p><input type=submit class=button value="{{ Save }}">
+</form>
+<br />
+{{ Notes }}:<br />
+- {{ CALLBACK_URL_IS }} {{ callback_url }}<br />
+- {{ CALLBACK_URL_ACCESSIBLE }}<br />
+- {{ AFRICASTALKING_PUSH_DLR }}<br />
+- {{ AFRICASTALKING_IS_BULK }}, <a href="http://www.africastalking.com" target="_blank">{{ AFRICASTALKING_FREE_CREDIT }}</a><br />
+{{ BUTTON_BACK }}
