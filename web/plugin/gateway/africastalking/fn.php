@@ -50,7 +50,7 @@ function africastalking_hook_sendsms($smsc, $sms_sender,$sms_footer,$sms_to,$sms
 		{ 
 		   $results = $gateway->sendMessage($recipients, $message, $from, $options, $bulkSMSMode);
 		            
-		  foreach($results as $result) {
+		foreach($results as $result) {
 		    // status is either "Success" or "error message"
 		    echo " Number: " .$result->number;
 		    echo " Status: " .$result->status;
@@ -85,7 +85,9 @@ function africastalking_hook_sendsms($smsc, $sms_sender,$sms_footer,$sms_to,$sms
 					_log("failed smslog_id:" . $smslog_id . " resp:" . $result . " smsc:[" . $smsc . "]", 2, "africastalking_hook_sendsms");
 			}
 		}
-		catch ( Exception $e )
+		
+		}
+		catch ( AfricasTalkingGatewayException $e )
 		{
 		  echo "Encountered an error while sending: ".$e->getMessage();
 		}
