@@ -85,7 +85,7 @@ function africastalking_hook_sendsms($smsc, $sms_sender,$sms_footer,$sms_to,$sms
 					_log("failed smslog_id:" . $smslog_id . " resp:" . $result . " smsc:[" . $smsc . "]", 2, "africastalking_hook_sendsms");
 			}
 		}
-		catch ( AfricasTalkingGatewayException $e )
+		catch ( Exception $e )
 		{
 		  echo "Encountered an error while sending: ".$e->getMessage();
 		}
