@@ -86,7 +86,7 @@ class AfricasTalkingGateway
   }
       }
     }
-    
+    $params['enqueue']=0;
     $this->_requestUrl  = $this->getSendSmsUrl();
     $this->_requestBody = http_build_query($params, '', '&');
     
